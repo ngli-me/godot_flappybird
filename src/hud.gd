@@ -2,7 +2,6 @@ extends CanvasLayer
 
 @export var score_scene: PackedScene
 
-
 signal start_game
 signal bird_color_change(index)
 signal pipe_color_change(index)
@@ -33,6 +32,8 @@ func show_game_over():
 	# Pipes
 	$GreenPipe.show()
 	$RedPipe.show()
+	# Once everything is shown, re-enable process
+	set_process(!is_processing())
 
 func initialize_score():
 	score = 0
@@ -73,7 +74,13 @@ func update_score():
 	else: 
 		toggle = true
 
+@onready var start_button = $StartButton
+func _process(_delta):
+	if Input.is_action_pressed("jump"):
+		start_button.emit_signal("pressed")
+
 func _on_start_button_pressed():
+	set_process(!is_processing()) # Disable the process method
 	$StartButton.hide()
 	$FlappyBird.hide()
 	$Instructions.hide()

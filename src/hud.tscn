@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://csrv86ouwfqq8"]
+[gd_scene format=3 uid="uid://csrv86ouwfqq8"]
 
-[ext_resource type="Script" path="res://src/hud.gd" id="1_3u08l"]
+[ext_resource type="Script" uid="uid://dckiap4saqrkv" path="res://src/hud.gd" id="1_3u08l"]
 [ext_resource type="PackedScene" uid="uid://csad7ueva2xwf" path="res://src/score.tscn" id="2_o35mg"]
 [ext_resource type="Texture2D" uid="uid://bwdp7wgxjrpr4" path="res://sprites/bluebird-downflap.png" id="3_t3gba"]
 [ext_resource type="Texture2D" uid="uid://d3c3cdh4byts3" path="res://sprites/bluebird-midflap.png" id="4_m8tu0"]
@@ -45,11 +45,11 @@ frame_1/duration = 0.1
 frame_2/texture = ExtResource("11_ff3ni")
 frame_2/duration = 0.1
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" unique_id=1362916886]
 script = ExtResource("1_3u08l")
 score_scene = ExtResource("2_o35mg")
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="ScoreLabel" type="Label" parent="." unique_id=1892289533]
 visible = false
 offset_top = 64.0
 offset_right = 480.0
@@ -57,16 +57,16 @@ offset_bottom = 90.0
 text = "0"
 horizontal_alignment = 1
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="." unique_id=89335246]
 modulate = Color(1, 1, 0, 0)
 offset_right = 480.0
 offset_bottom = 720.0
 scale = Vector2(0.998905, 0.786652)
 
-[node name="MessageTimer" type="Timer" parent="."]
+[node name="MessageTimer" type="Timer" parent="." unique_id=103416184]
 one_shot = true
 
-[node name="BlueBird" type="TextureButton" parent="."]
+[node name="BlueBird" type="TextureButton" parent="." unique_id=1081477481]
 offset_left = 144.133
 offset_top = 320.0
 offset_right = 178.133
@@ -74,60 +74,60 @@ offset_bottom = 344.0
 rotation = 0.00555315
 texture_normal = SubResource("AnimatedTexture_fddwc")
 
-[node name="RedBird" type="TextureButton" parent="."]
+[node name="RedBird" type="TextureButton" parent="." unique_id=2080424265]
 offset_left = 224.0
 offset_top = 320.0
 offset_right = 258.0
 offset_bottom = 344.0
 texture_normal = SubResource("AnimatedTexture_2yjl4")
 
-[node name="YellowBird" type="TextureButton" parent="."]
+[node name="YellowBird" type="TextureButton" parent="." unique_id=705530788]
 offset_left = 312.133
 offset_top = 320.0
 offset_right = 346.133
 offset_bottom = 344.0
 texture_normal = SubResource("AnimatedTexture_gy8yy")
 
-[node name="GreenPipe" type="TextureButton" parent="."]
+[node name="GreenPipe" type="TextureButton" parent="." unique_id=1228108113]
 offset_left = 136.0
 offset_top = 536.0
 offset_right = 188.0
 offset_bottom = 1036.0
 texture_normal = ExtResource("12_4d5cc")
 
-[node name="RedPipe" type="TextureButton" parent="."]
+[node name="RedPipe" type="TextureButton" parent="." unique_id=627446153]
 offset_left = 296.0
 offset_top = 536.0
 offset_right = 348.0
 offset_bottom = 1036.0
 texture_normal = ExtResource("13_1wn5q")
 
-[node name="Gameover" type="Sprite2D" parent="."]
+[node name="Gameover" type="Sprite2D" parent="." unique_id=1968716414]
 visible = false
 position = Vector2(248, 232)
 texture = ExtResource("14_w330f")
 
-[node name="FlappyBird" type="Sprite2D" parent="."]
+[node name="FlappyBird" type="Sprite2D" parent="." unique_id=1029003277]
 position = Vector2(240, 152)
 texture = ExtResource("15_2ulty")
 
-[node name="Instructions" type="Sprite2D" parent="."]
+[node name="Instructions" type="Sprite2D" parent="." unique_id=1971241110]
 position = Vector2(240, 424)
 texture = ExtResource("16_jf16t")
 
-[node name="GetReady" type="Sprite2D" parent="."]
+[node name="GetReady" type="Sprite2D" parent="." unique_id=1466359077]
 visible = false
 position = Vector2(250, 313)
 texture = ExtResource("17_it4gy")
 
-[node name="GetReadyTimer" type="Timer" parent="."]
+[node name="GetReadyTimer" type="Timer" parent="." unique_id=6703179]
 one_shot = true
 
-[node name="Score" type="Node2D" parent="."]
+[node name="Score" type="Node2D" parent="." unique_id=1084914777]
 visible = false
 position = Vector2(240, 72)
 
-[node name="DayNightToggle" type="Button" parent="."]
+[node name="DayNightToggle" type="Button" parent="." unique_id=728813477]
 modulate = Color(1, 1, 1, 0)
 offset_top = 568.0
 offset_right = 480.0

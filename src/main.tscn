@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://niwor7dy4u7"]
+[gd_scene format=3 uid="uid://niwor7dy4u7"]
 
-[ext_resource type="Script" path="res://src/main.gd" id="1_7hbvq"]
+[ext_resource type="Script" uid="uid://c46jf8gglrwn6" path="res://src/main.gd" id="1_7hbvq"]
 [ext_resource type="PackedScene" uid="uid://wkt7atjupgnt" path="res://src/pipe.tscn" id="2_oi2t4"]
 [ext_resource type="PackedScene" uid="uid://bv5jikv6yys6l" path="res://src/player.tscn" id="3_x1gp2"]
 [ext_resource type="PackedScene" uid="uid://bwk0jwk5piw14" path="res://src/parallax_background.tscn" id="4_8gd34"]
@@ -9,46 +9,46 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5een"]
 size = Vector2(480, 40)
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=21967993]
 script = ExtResource("1_7hbvq")
 pipe_scene = ExtResource("2_oi2t4")
 
-[node name="Player" parent="." instance=ExtResource("3_x1gp2")]
+[node name="Player" parent="." unique_id=822547959 instance=ExtResource("3_x1gp2")]
 position = Vector2(128, 256)
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("4_8gd34")]
+[node name="ParallaxBackground" parent="." unique_id=217378596 instance=ExtResource("4_8gd34")]
 
-[node name="PipeTimer" type="Timer" parent="."]
+[node name="PipeTimer" type="Timer" parent="." unique_id=422448711]
 wait_time = 1.25
 
-[node name="StartTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="." unique_id=1166660501]
 wait_time = 0.1
 one_shot = true
 
-[node name="HUD" parent="." instance=ExtResource("5_oqhab")]
+[node name="HUD" parent="." unique_id=1557701374 instance=ExtResource("5_oqhab")]
 layer = 0
 
-[node name="PipeSpawn" type="Node2D" parent="."]
+[node name="PipeSpawn" type="Node2D" parent="." unique_id=1660983236]
 
-[node name="PipeTop" type="Node2D" parent="PipeSpawn"]
+[node name="PipeTop" type="Node2D" parent="PipeSpawn" unique_id=1097433259]
 position = Vector2(480, 0)
 
-[node name="PipeBottom" type="Node2D" parent="PipeSpawn"]
+[node name="PipeBottom" type="Node2D" parent="PipeSpawn" unique_id=765740553]
 position = Vector2(480, 720)
 
-[node name="StartPosition" type="Marker2D" parent="."]
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1553729496]
 position = Vector2(128, 256)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1610965030]
 custom_integrator = true
 
-[node name="BottomCollisionShape" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="BottomCollisionShape" type="CollisionShape2D" parent="RigidBody2D" unique_id=2004210421]
 position = Vector2(240, 736)
 shape = SubResource("RectangleShape2D_f5een")
 one_way_collision = true
 debug_color = Color(0.964706, 0, 0.478431, 0.419608)
 
-[node name="TopCollisionShape" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="TopCollisionShape" type="CollisionShape2D" parent="RigidBody2D" unique_id=745106721]
 position = Vector2(240, -16)
 shape = SubResource("RectangleShape2D_f5een")
 one_way_collision = true
